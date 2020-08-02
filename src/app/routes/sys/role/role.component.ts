@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { _HttpClient, ModalHelper } from '@delon/theme';
+import { ModalHelper } from '@delon/theme';
 import { SFSchema } from '@delon/form';
 // @ts-ignore
 import { SimpleTableComponent } from '@delon/abc';
 import { RoleService } from '../../../core/service/sys/role.service';
 import { NzMessageService } from 'ng-zorro-antd';
+import { SysRoleEditComponent } from './edit/edit.component';
 
 @Component({
   selector: 'app-sys-role',
