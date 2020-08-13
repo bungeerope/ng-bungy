@@ -42,15 +42,19 @@ export class UserLoginComponent implements OnDestroy {
   get userName() {
     return this.form.controls.userName;
   }
+
   get password() {
     return this.form.controls.password;
   }
+
   get mobile() {
     return this.form.controls.mobile;
   }
+
   get captcha() {
     return this.form.controls.captcha;
   }
+
   form: FormGroup;
   error = '';
   type = 0;
@@ -112,6 +116,7 @@ export class UserLoginComponent implements OnDestroy {
         password: this.password.value,
       })
       .subscribe((res) => {
+        console.log(JSON.stringify(res));
         if (res.msg !== 'ok') {
           this.error = res.msg;
           return;
